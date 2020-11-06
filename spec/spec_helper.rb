@@ -1,5 +1,6 @@
 require 'rspec'
 require 'moodle2cc'
+require 'pry'
 Dir["./spec/support/**/*.rb"].sort.each {|f| require f}
 
 RSpec.configure do |c|

@@ -183,6 +183,13 @@
           <title>Plate Tectonics 1</title>
           <directory>activities/lti_421027</directory>
         </activity>
+        <activity>
+          <moduleid>15962</moduleid>
+          <sectionid>9955</sectionid>
+          <modulename>scorm</modulename>
+          <title>Sample Scorm</title>
+          <directory>activities/scorm_15962</directory>
+        </activity>
       </activities>
       <sections>
         <section>
@@ -572,6 +579,18 @@
         <level>activity</level>
         <activity>assign_12</activity>
         <name>assign_12_userinfo</name>
+        <value>1</value>
+      </setting>
+      <setting>
+        <level>activity</level>
+        <activity>scorm_15962</activity>
+        <name>scorm_15962_included</name>
+        <value>1</value>
+      </setting>
+      <setting>
+        <level>activity</level>
+        <activity>scorm_15962</activity>
+        <name>scorm_15962_userinfo</name>
         <value>1</value>
       </setting>
     </settings>

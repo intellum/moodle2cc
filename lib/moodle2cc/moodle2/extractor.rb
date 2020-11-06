@@ -46,6 +46,7 @@ module Moodle2CC::Moodle2
       parse_external_urls(work_dir, course)
       parse_resources(work_dir, course)
       parse_lti_links(work_dir, course)
+      parse_scorms(work_dir, course)
       collect_files_for_resources(course)
       collect_activities_for_sections(course.sections, course.activities)
       course
@@ -184,6 +185,12 @@ module Moodle2CC::Moodle2
             course.assignments << item
           end
         end
+      end
+    end
+
+    def parse_scorms(work_dir, course)
+      if scorms = Moodle2CC::Moodle2::Parsers::ScormParser.new(work_dir).parse
+        course.scorms += scorms
       end
     end
 

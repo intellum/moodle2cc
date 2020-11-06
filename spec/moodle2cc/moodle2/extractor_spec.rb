@@ -26,6 +26,7 @@ module Moodle2CC::Moodle2
       allow_any_instance_of(Parsers::ExternalUrlParser).to receive(:parse)
       allow_any_instance_of(Parsers::ResourceParser).to receive(:parse)
       allow_any_instance_of(Parsers::LtiParser).to receive(:parse)
+      allow_any_instance_of(Parsers::ScormParser).to receive(:parse)
       allow(Zip::File).to receive(:open).and_yield([])
     end
 
@@ -212,6 +213,13 @@ module Moodle2CC::Moodle2
       extractor.extract {}
       expect(course.lti_links).to eq [link]
       expect(course.assignments).to eq [graded]
+    end
+
+    it 'parses scorms' do
+      scorm = Models::Scorm.new
+      allow_any_instance_of(Parsers::ScormParser).to receive(:parse).and_return([scorm])
+      extractor.extract {}
+      expect(course.scorms).to eq [scorm]
     end
   end
 end
