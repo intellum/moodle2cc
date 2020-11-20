@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<activity id="1052" moduleid="15997" modulename="checklist" contextid="69406">
+  <checklist id="1052">
+    <name>Sample Checklist</name>
+    <intro>&lt;p&gt;checklist&lt;/p&gt;</intro>
+    <introformat>1</introformat>
+    <timecreated>1480627243</timecreated>
+    <timemodified>1588632675</timemodified>
+    <useritemsallowed>0</useritemsallowed>
+    <teacheredit>1</teacheredit>
+    <theme>default</theme>
+    <duedatesoncalendar>0</duedatesoncalendar>
+    <teachercomments>1</teachercomments>
+    <maxgrade>100</maxgrade>
+    <autopopulate>0</autopopulate>
+    <autoupdate>1</autoupdate>
+    <completionpercent>100</completionpercent>
+    <emailoncomplete>1</emailoncomplete>
+    <lockteachermarks>0</lockteachermarks>
+    <items>
+      <item id="14921">
+        <userid>0</userid>
+        <displaytext>I, the instructor, confirm that he/she has successfully completed the entire certification program.</displaytext>
+        <position>1</position>
+        <indent>1</indent>
+        <itemoptional>0</itemoptional>
+        <duetime>0</duetime>
+        <colour>black</colour>
+        <moduleid>0</moduleid>
+        <hidden>0</hidden>
+        <checks>
+        </checks>
+        <comments>
+        </comments>
+      </item>
+    </items>
+  </checklist>
+</activity>

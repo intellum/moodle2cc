@@ -190,6 +190,13 @@
           <title>Sample Scorm</title>
           <directory>activities/scorm_15962</directory>
         </activity>
+        <activity>
+          <moduleid>15997</moduleid>
+          <sectionid>9983</sectionid>
+          <modulename>checklist</modulename>
+          <title>Sample Checklist</title>
+          <directory>activities/checklist_15997</directory>
+        </activity>
       </activities>
       <sections>
         <section>

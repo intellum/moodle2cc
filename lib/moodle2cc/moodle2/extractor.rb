@@ -47,6 +47,7 @@ module Moodle2CC::Moodle2
       parse_resources(work_dir, course)
       parse_lti_links(work_dir, course)
       parse_scorms(work_dir, course)
+      parse_checklists(work_dir, course)
       collect_files_for_resources(course)
       collect_activities_for_sections(course.sections, course.activities)
       course
@@ -191,6 +192,12 @@ module Moodle2CC::Moodle2
     def parse_scorms(work_dir, course)
       if scorms = Moodle2CC::Moodle2::Parsers::ScormParser.new(work_dir).parse
         course.scorms += scorms
+      end
+    end
+
+    def parse_checklists(work_dir, course)
+      if checklists = Moodle2CC::Moodle2::Parsers::ChecklistParser.new(work_dir).parse
+        course.checklists += checklists
       end
     end
 

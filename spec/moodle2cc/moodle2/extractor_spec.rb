@@ -27,6 +27,7 @@ module Moodle2CC::Moodle2
       allow_any_instance_of(Parsers::ResourceParser).to receive(:parse)
       allow_any_instance_of(Parsers::LtiParser).to receive(:parse)
       allow_any_instance_of(Parsers::ScormParser).to receive(:parse)
+      allow_any_instance_of(Parsers::ChecklistParser).to receive(:parse)
       allow(Zip::File).to receive(:open).and_yield([])
     end
 
@@ -221,5 +222,13 @@ module Moodle2CC::Moodle2
       extractor.extract {}
       expect(course.scorms).to eq [scorm]
     end
+
+    it 'parses checklists' do
+      checklist = Models::Checklist.new
+      allow_any_instance_of(Parsers::ChecklistParser).to receive(:parse).and_return([checklist])
+      extractor.extract {}
+      expect(course.checklists).to eq [checklist]
+    end
+
   end
 end

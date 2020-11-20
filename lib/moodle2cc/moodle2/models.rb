@@ -20,4 +20,5 @@ module Moodle2CC::Moodle2::Models
   require_relative 'models/wiki'
   require_relative 'models/lti'
   require_relative 'models/scorm'
+  require_relative 'models/checklist'
 end
